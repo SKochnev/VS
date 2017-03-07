@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace WpfApplication1
 {
     /// <summary>
@@ -40,14 +41,11 @@ namespace WpfApplication1
             public string Phone { get; set; }
         }
 
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void buttonAdd_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
+            WindowStud w = new WindowStud();
+            w.ShowDialog();
+            
         }
     }
 }

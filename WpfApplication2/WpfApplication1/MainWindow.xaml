@@ -3,16 +3,16 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WpfApplication1"
+        xmlns:local="clr-namespace:WpfApplication1"        
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1200">
     <Grid>
-        <Button x:Name="buttonAdd" Content="Add" HorizontalAlignment="Left" Margin="8,10,0,0" VerticalAlignment="Top" Width="156" Height="43"/>
+        <Button x:Name="buttonAdd" Content="Add" HorizontalAlignment="Left" Margin="8,10,0,0" VerticalAlignment="Top" Width="156" Height="43" Click="buttonAdd_Click"/>
         <Button x:Name="buttonEdit" Content="Edit" HorizontalAlignment="Left" Margin="176,10,0,0" VerticalAlignment="Top" Width="156" Height="43"/>
         <Button x:Name="buttonDel" Content="Del" HorizontalAlignment="Left" Margin="342,10,0,0" VerticalAlignment="Top" Width="157" Height="43"/>
         <Button x:Name="buttonStudInDel"  HorizontalAlignment="Left" Margin="537,288,0,0" VerticalAlignment="Top" Width="62" RenderTransformOrigin="0.235,-1.4" Height="24"/>
         <Button x:Name="buttonStudFromDel"  HorizontalAlignment="Left" Margin="537,388,0,0" VerticalAlignment="Top" Width="62" RenderTransformOrigin="0.235,-1.4" Height="24"/>
-        <ListView x:Name="Stud" HorizontalAlignment="Left" Height="593" Margin="8,66,0,0" VerticalAlignment="Top" Width="491" SelectionChanged="listView_SelectionChanged">
+        <ListView x:Name="Stud" HorizontalAlignment="Left" Height="593" Margin="8,66,0,0" VerticalAlignment="Top" Width="491" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ФИО" Width="140" DisplayMemberBinding="{Binding FIO}"/>
