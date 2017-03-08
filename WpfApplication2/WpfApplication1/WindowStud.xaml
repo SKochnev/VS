@@ -14,7 +14,7 @@
         <Label x:Name="labelGroup" Content="Label" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" Width="114"/>
         <TextBox x:Name="textBoxPhone" HorizontalAlignment="Left" Height="26" Margin="129,110,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="153" TextChanged="textBox_TextChanged"/>
         <Label x:Name="labelPhone" Content="Label" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="114"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="62,150,0,0" VerticalAlignment="Top" Width="190" Height="28"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="62,150,0,0" VerticalAlignment="Top" Width="190" Height="28" Click="button_Click"/>
         
 
     </Grid>

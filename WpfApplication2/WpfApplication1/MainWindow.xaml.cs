@@ -47,5 +47,18 @@ namespace WpfApplication1
             w.ShowDialog();
             
         }
+
+        private void buttonEdit_Click(object sender, RoutedEventArgs e)
+        {
+            WindowStud w = new WindowStud();
+          
+            w.ShowDialog();
+
+        }
+
+        private void Stud_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+        }
     }
 }

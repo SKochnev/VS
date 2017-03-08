@@ -22,6 +22,16 @@ namespace WpfApplication1
         public WindowStud()
         {
             InitializeComponent();
+            
+        }
+
+        public class Student
+        {
+            public string FIO { get; set; }
+
+            public string Group { get; set; }
+
+            public string Phone { get; set; }
         }
 
         private void WindowStud_Closing()
@@ -31,6 +41,13 @@ namespace WpfApplication1
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+           List<MainWindow.Student> items = new List<MainWindow.Student>();
+            items.Add(new MainWindow.Student() { FIO = textBoxFIO.Text.ToString(), Group = textBoxGroup.Text.ToString(), Phone = textBoxPhone.Text.ToString() });
+            //MainWindow w = new MainWindow();
         }
     }
 }
