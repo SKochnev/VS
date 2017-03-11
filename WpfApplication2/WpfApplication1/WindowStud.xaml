@@ -7,18 +7,29 @@
         mc:Ignorable="d"
         Title="WindowStud" Height="300" Width="300">
     <Grid>
-        <Grid.ColumnDefinitions>
-           <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Label x:Name="labelTop" Content="Label" HorizontalAlignment="Left" Margin="51,10,0,0" VerticalAlignment="Top" Width="191"/>
-        <TextBox x:Name="textBoxFIO" HorizontalAlignment="Left" Height="26" Margin="129,48,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="153" TextChanged="textBox_TextChanged"/>
-        <Label x:Name="labeFIO" Content="Label" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Width="114"/>
-        <TextBox x:Name="textBoxGroup" HorizontalAlignment="Left" Height="26" Margin="129,79,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="153" TextChanged="textBox_TextChanged"/>
-        <Label x:Name="labelGroup" Content="Label" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" Width="114"/>
-        <TextBox x:Name="textBoxPhone" HorizontalAlignment="Left" Height="26" Margin="129,110,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="153" TextChanged="textBox_TextChanged"/>
-        <Label x:Name="labelPhone" Content="Label" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="114"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="62,150,0,0" VerticalAlignment="Top" Width="190" Height="28" Click="button_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        
+        <Label x:Name="labelTop" Content="Label" Grid.Row="0"/>
+        
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBox x:Name="textBoxFIO" HorizontalAlignment="Left" Height="26" Margin="129,48,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="153" TextChanged="textBox_TextChanged"/>
+            <Label x:Name="labeFIO" Content="Label" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Width="114"/>
+            <TextBox x:Name="textBoxGroup" HorizontalAlignment="Left" Height="26" Margin="129,79,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="153" TextChanged="textBox_TextChanged"/>
+            <Label x:Name="labelGroup" Content="Label" HorizontalAlignment="Left" Margin="10,79,0,0" VerticalAlignment="Top" Width="114"/>
+            <TextBox x:Name="textBoxPhone" HorizontalAlignment="Left" Height="26" Margin="129,110,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="153" TextChanged="textBox_TextChanged"/>
+            <Label x:Name="labelPhone" Content="Label" HorizontalAlignment="Left" Margin="10,110,0,0" VerticalAlignment="Top" Width="114"/>
+        </Grid>
+        
+            <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="62,150,0,0" VerticalAlignment="Top" Width="190" Height="28" Click="button_Click"/>
         
 
     </Grid>
