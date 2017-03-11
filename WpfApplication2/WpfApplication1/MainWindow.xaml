@@ -7,30 +7,84 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="700" Width="1200">
     <Grid>
-        <Button x:Name="buttonAdd" Content="Add" HorizontalAlignment="Left" Margin="8,10,0,0" VerticalAlignment="Top" Width="156" Height="43" Click="buttonAdd_Click"/>
-        <Button x:Name="buttonEdit" Content="Edit" HorizontalAlignment="Left" Margin="176,10,0,0" VerticalAlignment="Top" Width="156" Height="43" Click="buttonEdit_Click"/>
-        <Button x:Name="buttonDel" Content="Del" HorizontalAlignment="Left" Margin="342,10,0,0" VerticalAlignment="Top" Width="157" Height="43"/>
-        <Button x:Name="buttonStudInDel"  HorizontalAlignment="Left" Margin="537,288,0,0" VerticalAlignment="Top" Width="62" RenderTransformOrigin="0.235,-1.4" Height="24"/>
-        <Button x:Name="buttonStudFromDel"  HorizontalAlignment="Left" Margin="537,388,0,0" VerticalAlignment="Top" Width="62" RenderTransformOrigin="0.235,-1.4" Height="24"/>
-        <ListView x:Name="Stud" HorizontalAlignment="Left" Height="593" Margin="8,66,0,0" VerticalAlignment="Top" Width="491" SelectionChanged="Stud_SelectionChanged" >
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="ФИО" Width="140" DisplayMemberBinding="{Binding FIO}"/>
-                    <GridViewColumn Header="Группа" Width="80" DisplayMemberBinding="{Binding Group}"/>
-                    <GridViewColumn Header="Номер" Width="140" DisplayMemberBinding="{Binding Phone}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
-        <ListView x:Name="StudNo" Margin="636,66,0,0" Height="593" Width="546" HorizontalAlignment="Left" VerticalAlignment="Top" Padding="0">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="ФИО" Width="140" DisplayMemberBinding="{Binding FIO}"/>
-                    <GridViewColumn Header="Группа" Width="80" DisplayMemberBinding="{Binding Group}"/>
-                    <GridViewColumn Header="Номер" Width="140" DisplayMemberBinding="{Binding Phone}"/>
-                    <GridViewColumn Header="Отчислен" Width="80" DisplayMemberBinding="{Binding Chek}"/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
 
+        <Grid Grid.Column="2" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label Content="Pasha pIdor"  VerticalAlignment="Center" Grid.Row="0"/>
+        </Grid>
+
+        <Grid Grid.Column="0" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Label  Content="Pasha pIdor"  VerticalAlignment="Center" Grid.Row="0"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="buttonAdd" Content="Add"  Click="buttonAdd_Click" Grid.Column="0" Margin="5"/>
+                <Button x:Name="buttonEdit" Content="Edit" Click="buttonEdit_Click" Grid.Column="1" Margin="5"/>
+                <Button x:Name="buttonDel" Content="Del" Grid.Column="2" Margin="5"/>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>                
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Button x:Name="buttonStudInDel"  Grid.Row="0"  MaxWidth="50" MaxHeight="30" MinWidth="15" MinHeight="10"/>
+            <Button x:Name="buttonStudFromDel" Grid.Row="1" MaxWidth="50"  MaxHeight="30" MinWidth="15" MinHeight="10"/>
+        </Grid>
+
+            <Grid>           
+            </Grid>
+
+            <Grid>
+            </Grid>
+
+        <ListView x:Name="Stud" SelectionChanged="Stud_SelectionChanged"  Grid.Column="0" Grid.Row="1" >
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="ФИО" Width="Auto" DisplayMemberBinding="{Binding FIO}"/>
+                            <GridViewColumn Header="Группа" Width="Auto" DisplayMemberBinding="{Binding Group}"/>
+                            <GridViewColumn Header="Номер" Width="Auto" DisplayMemberBinding="{Binding Phone}"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+
+
+        <ListView x:Name="StudNo"    Grid.Column="2" Grid.Row="1">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="ФИО" Width="Auto"   DisplayMemberBinding="{Binding FIO}"/>
+                            <GridViewColumn Header="Группа" Width="Auto" DisplayMemberBinding="{Binding Group}"/>
+                            <GridViewColumn Header="Номер" Width="Auto" DisplayMemberBinding="{Binding Phone}"/>
+                    <GridViewColumn Header="Отчислен" Width="Auto" DisplayMemberBinding="{Binding Chek}">
+                       
+                    </GridViewColumn>
+                </GridView>
+                    </ListView.View>
+
+                </ListView>
+           
     </Grid>
 </Window>

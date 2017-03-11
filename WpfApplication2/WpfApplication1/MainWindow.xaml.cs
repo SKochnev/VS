@@ -24,13 +24,18 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
-            buttonStudInDel.Content = ">";
+            buttonStudInDel.Content =   ">";
             buttonStudFromDel.Content = "<";
 
             List<Student> items = new List<Student>();
             items.Add(new Student() { FIO = "Жопкин Анатолий Владимирович", Group = "ОрГу-11", Phone = "89012387631" });
             Stud.ItemsSource = items;
+
+            //List<Student> itemsNo = new List<Student>();
+            //itemsNo.Add(new Student() { FIO = "Жопкин Анатолий Владимирович", Group = "ОрГу-11", Phone = "89012387631", Chek = true });
+           // StudNo.InputScope = itemsNo;
         }
+
 
         public class Student
         {
@@ -39,6 +44,10 @@ namespace WpfApplication1
             public string Group { get; set; }
 
             public string Phone { get; set; }
+
+            public bool Chek { get; set; }
+
+
         }
 
         private void buttonAdd_Click(object sender, RoutedEventArgs e)

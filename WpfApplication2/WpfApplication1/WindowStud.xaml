@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="WindowStud" Height="300" Width="300">
     <Grid>
+        <Grid.ColumnDefinitions>
+           <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Label x:Name="labelTop" Content="Label" HorizontalAlignment="Left" Margin="51,10,0,0" VerticalAlignment="Top" Width="191"/>
         <TextBox x:Name="textBoxFIO" HorizontalAlignment="Left" Height="26" Margin="129,48,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="153" TextChanged="textBox_TextChanged"/>
         <Label x:Name="labeFIO" Content="Label" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" Width="114"/>
