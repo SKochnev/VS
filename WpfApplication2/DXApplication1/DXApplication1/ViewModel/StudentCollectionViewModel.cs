@@ -15,8 +15,7 @@ namespace DXApplication1
             Grouplist.Add(new Group { Name = "BIS" });
             Grouplist.Add(new Group { Name = "BPI" });
             Grouplist.Add(new Group { Name = "BIK" });
-
-            //Grouplist
+            
         }
 
 
@@ -25,7 +24,7 @@ namespace DXApplication1
         public virtual ObservableCollection<SudentModel> StudentList { get; set; }
 
         [BindableProperty]
-        public virtual ObservableCollection<SudentModel> ExpilledStudentList { get; set; }
+        public virtual ObservableCollection<ExpilledStudenModel> ExpilledStudentList { get; set; }
 
         public virtual ObservableCollection<Group> Grouplist { get; set; }
         [BindableProperty]
@@ -34,7 +33,7 @@ namespace DXApplication1
         [Command]
         public void NewStudent(SudentModel stud)
         {
-            StudentList.Add(new SudentModel() { FIO = "Pasha", Phone = "*99999999"});
+            StudentList.Add(new SudentModel() { FIO = "Pasha", Phone = "*99999999" });
         }
 
         [Command]
@@ -46,16 +45,22 @@ namespace DXApplication1
         [Command]
         public void DeleteSudent(SudentModel stud)
         {
-            StudentList.Single(w => w.Id == stud.Id).IsRemoved = true;                      
+            StudentList.Single(w => w.Id == stud.Id).IsRemoved = true;
         }
 
         [Command]
         public void StudentOnExpulsion(SudentModel stud)
         {
-            ExpilledStudentList.Add(stud);
+            ExpilledStudentList.Add(new ExpilledStudenModel
+            {
+                Id = stud.Id,
+                IsRemoved = stud.IsRemoved,
+                FIO = stud.FIO,
+                Phone = stud.Phone,
+            });
             StudentList.Remove(stud);
-            //DeleteSudent(stud);
-        }
+        } 
+
     }
 
     

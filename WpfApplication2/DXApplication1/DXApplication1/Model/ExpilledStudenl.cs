@@ -9,5 +9,12 @@ namespace DXApplication1
     class ExpilledStudenModel : SudentModel
     {
         public bool IsExpilled { get; set; }
+        public ExpilledStudenModel()
+        {
+            Id = Guid.NewGuid();
+        }
+        public string FIO { get; set; }
+        public Group Group { get; set; }
+        public string Phone { get; set; }
     }
 }
